@@ -49,7 +49,17 @@ const services = [
           <span>We Make Your Pet Healthy</span>
         </div>
       </div>
-      <div class="grid grid-cols-4 gap-4 mt-20 relative z-10">
+      <div
+        class="
+          grid grid-cols-1
+          gap-4
+          mt-20
+          relative
+          z-10
+          lg:grid-cols-2
+          xl:grid-cols-4
+        "
+      >
         <div
           class="
             group
@@ -61,12 +71,13 @@ const services = [
             shadow-md
             transition-all
             duration-300
+            cursor-pointer
             hover:shadow-2xl hover:bg-gray-800
           "
           v-for="(service, index) in services"
           :key="index"
         >
-          <div class="absolute bottom-0 left-0 z-0 h-full">
+          <div class="absolute bottom-0 left-0 z-0 h-full w-full">
             <img
               :src="service.backgroundImage"
               :alt="service.name"
@@ -108,7 +119,7 @@ const services = [
               class="
                 text-justify text-sm
                 leading-loose
-                text-gray-700
+                text-gray-500
                 transition-all
                 group-hover:text-white
               "
